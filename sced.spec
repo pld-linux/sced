@@ -4,7 +4,7 @@ Name:		sced
 Version:	1.02
 Release:	1
 Copyright:	GPL
-Group:		X11/Application/Graphics
+Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.cs.berkeley.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
 Source1:	http://www.cs.berkeley.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
