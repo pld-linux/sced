@@ -15,7 +15,6 @@ BuildRequires:	XFree86-devel
 Requires:	povray
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Scene designer.
 
@@ -24,7 +23,7 @@ Program s³u¿±cy do projektowania scen.
 
 %prep
 %setup -q
-install %SOURCE1 .
+install %{SOURCE1} .
 
 #%patch
 
