@@ -3,19 +3,20 @@ Summary(pl):	SCED - projektowanie scen.
 Name:		sced
 Version:	1.03
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		X11/Applications/Graphics
+Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
 Source1:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
 URL:		http://www.cs.wisc.edu/~schenney/sced/
-#Patch0:		
+#Patch0:	
 BuildRequires:	XFree86-devel
 Requires:	povray
-Buildroot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr/X11R6
-%define	_mandir	/usr/share/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		/usr/share/man
 
 %description
 
@@ -38,7 +39,7 @@ n
 n
 y
 EOF
-%{__make} OTHER_FLAGS="$RPM_OPT_FLAGS"
+%{__make} OTHER_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,7 +49,6 @@ install -d $RPM_BUILD_ROOT/etc/skel
 
 install scenerc $RPM_BUILD_ROOT/etc/skel/.scenerc
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 gzip -9nf README*
 
 %clean
