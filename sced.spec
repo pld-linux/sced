@@ -5,8 +5,6 @@ Version:	1.03
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Group(de):	X11/Applikationen/Grafik
-Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
 Source1:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
 URL:		http://www.cs.wisc.edu/~schenney/sced/
