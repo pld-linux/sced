@@ -1,5 +1,5 @@
-Summary:	SCED - Scene Designer.
-Summary(pl):	SCED - projektowanie scen.
+Summary:	SCED - Scene Designer
+Summary(pl):	SCED - projektowanie scen
 Name:		sced
 Version:	1.03
 Release:	1
@@ -10,7 +10,7 @@ Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
 Source1:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
 URL:		http://www.cs.wisc.edu/~schenney/sced/
-#Patch0:	
+#Patch0:
 BuildRequires:	XFree86-devel
 Requires:	povray
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,8 +19,10 @@ Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		/usr/share/man
 
 %description
+Scene designer.
 
 %description -l pl
+Program s³u¿±cy do projektowania scen.
 
 %prep
 %setup -q
