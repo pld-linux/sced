@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %SOURCE1 docs/guide.tex README*.gz
+%doc *.ps.gz docs/guide.tex README*.gz
 %attr(644,root,root) /etc/skel/.scenerc
 %attr(755,root,root) %{_bindir}/sced
 %attr(644,root,root) %{_mandir}/man1/*
