@@ -38,11 +38,11 @@ n
 n
 y
 EOF
-make OTHER_FLAGS="$RPM_OPT_FLAGS"
+%{__make} OTHER_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} install
+%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} install
 
 install -d $RPM_BUILD_ROOT/etc/skel
 
