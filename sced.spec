@@ -13,8 +13,6 @@ BuildRequires:	XFree86-devel
 Requires:	povray
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		/usr/share/man
 
 %description
 Scene designer.
