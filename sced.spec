@@ -6,7 +6,9 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
+# Source0-md5:	17a468d5b499314b85aee5d8930263e7
 Source1:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
+# Source1-md5:	486ec85d2f617cac047304c115b6d900
 URL:		http://www.cs.wisc.edu/~schenney/sced/
 #Patch0:
 BuildRequires:	XFree86-devel
