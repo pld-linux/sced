@@ -13,7 +13,7 @@ URL:		http://www.cs.wisc.edu/~schenney/sced/
 #Patch0:
 BuildRequires:	XFree86-devel
 Requires:	povray
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
 %description
