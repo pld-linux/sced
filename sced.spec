@@ -49,14 +49,12 @@ install -d $RPM_BUILD_ROOT/etc/skel
 
 install scenerc $RPM_BUILD_ROOT/etc/skel/.scenerc
 
-gzip -9nf README*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.ps.gz docs/guide.tex README*.gz
+%doc *.ps* docs/guide.tex README*
 %attr(644,root,root) /etc/skel/.scenerc
 %attr(755,root,root) %{_bindir}/sced
 %attr(644,root,root) %{_mandir}/man1/*
