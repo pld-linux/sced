@@ -5,12 +5,11 @@ Version:	1.03
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-%{version}.tar.gz
+Source0:	http://www.cs.wisc.edu/~schenney/sced/src/%{name}-%{version}.tar.gz
 # Source0-md5:	17a468d5b499314b85aee5d8930263e7
-Source1:	http://www.cs.wisc.edu/~schenney/%{name}/src/%{name}-1.0-guide.ps.gz
+Source1:	http://www.cs.wisc.edu/~schenney/sced/src/%{name}-1.0-guide.ps.gz
 # Source1-md5:	486ec85d2f617cac047304c115b6d900
 URL:		http://www.cs.wisc.edu/~schenney/sced/
-#Patch0:
 BuildRequires:	XFree86-devel
 Requires:	povray
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,10 +24,10 @@ Program s³u¿±cy do projektowania scen.
 %setup -q
 install %{SOURCE1} .
 
-#%patch
-
 %build
-./configure --prefix=%{_prefix} --with-x <<'EOF'
+./configure \
+	--prefix=%{_prefix} \
+	--with-x <<'EOF'
 y
 /usr/bin/povray
 
@@ -38,11 +37,14 @@ n
 n
 y
 EOF
-%{__make} OTHER_FLAGS="%{rpmcflags}"
+%{__make} \
+	OTHER_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} install
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	mandir=$RPM_BUILD_ROOT%{_mandir}
 
 install -d $RPM_BUILD_ROOT/etc/skel
 
