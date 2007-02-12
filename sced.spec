@@ -1,5 +1,5 @@
 Summary:	SCED - Scene Designer
-Summary(pl.UTF-8):   SCED - projektowanie scen
+Summary(pl.UTF-8):	SCED - projektowanie scen
 Name:		sced
 Version:	1.03
 Release:	1
