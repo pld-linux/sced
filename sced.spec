@@ -1,5 +1,5 @@
 Summary:	SCED - Scene Designer
-Summary(pl):	SCED - projektowanie scen
+Summary(pl.UTF-8):   SCED - projektowanie scen
 Name:		sced
 Version:	1.03
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Scene designer.
 
-%description -l pl
-Program s³u¿±cy do projektowania scen.
+%description -l pl.UTF-8
+Program sÅ‚uÅ¼Ä…cy do projektowania scen.
 
 %prep
 %setup -q
